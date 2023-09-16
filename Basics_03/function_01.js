@@ -53,4 +53,42 @@ function loginUserName(username = "Shanu"){  //by default value
 
 // const user = loginUserName()
 const user = loginUserName("Aasif")
-console.log(user);
+// console.log(user);
+
+
+// if we don't know how many arguments user give
+
+
+function calculateCartPrice(...num1){ //rest operator used to handle arguments
+    return num1
+}
+
+// console.log(calculateCartPrice(200,300,400));
+
+const userDetails = {
+    username: "Aasif",
+    age: 23
+}
+
+function handleObjects(anyobjects){
+    console.log(`Username is ${anyobjects.username} and age is ${anyobjects.age}`);
+}
+
+// handleObjects(userDetails)
+
+
+handleObjects({
+    username: "Sam",
+    age: 30
+})
+
+const myNewArray = [200,400,600,900]
+
+function returnThirdValue(getArray){
+    return getArray[1]
+}
+
+// console.log(returnThirdValue(myNewArray));
+console.log(returnThirdValue([
+    200,300,500,600
+]));
