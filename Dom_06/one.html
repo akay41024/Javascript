@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Overview</title>
+</head>
+<style>
+    .bg-black{
+        background-color: #212121;
+        color: #fff
+    }
+</style>
+<body  class="bg-black">
+    <div>
+        <h1 id="title" class="heading">
+            Dom learning in javascript <span style="display: none;">test text</span> series
+        </h1>
+        <h1>Lorem ipsum dolor sit.</h1>
+        <h1>Lorem ipsum dolor sit.</h1>
+        <h1>Lorem ipsum dolor sit.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur</p>
+        <input type="password">
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+<!-- 
+
+document.getElementById("title")
+<h1 id=​"title" class=​"heading">​ Dom learning in javascript series ​</h1>​
+document.getElementById("title").id
+'title'
+document.getElementById("title").className
+'heading'
+document.getElementById("title").class
+undefined
+document.getElementById("title").getAttribute
+ƒ getAttribute() { [native code] }
+document.getElementById("title").getAttribute()
+VM409:1 Uncaught TypeError: Failed to execute 'getAttribute' on 'Element': 1 argument required, but only 0 present.
+    at <anonymous>:1:34
+(anonymous) @ VM409:1
+document.getElementById("title").getAttribute("id")
+'title'
+document.getElementById("title").setAttribute("class=test")
+VM491:1 Uncaught TypeError: Failed to execute 'setAttribute' on 'Element': 2 arguments required, but only 1 present.
+    at <anonymous>:1:34
+(anonymous) @ VM491:1
+document.getElementById("title").setAttribute("class", "test")
+undefined
+document.getElementById("title").setAttribute("class", "test heading")
+undefined
+document.getElementById("title")
+<h1 id=​"title" class=​"test heading">​ Dom learning in javascript series ​</h1>​
+const title = document.getElementById("title")
+undefined
+tit
+VM703:1 Uncaught ReferenceError: tit is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM703:1
+title
+<h1 id=​"title" class=​"test heading">​ Dom learning in javascript series ​</h1>​
+    title.style.backgroundColor = "green"
+'green'
+    title.style.padding = "15px"
+'15px'
+    title.style.margin = "15px"
+'15px'
+    title.style.borderRadius = "15px"
+'15px'
+
+
+
+const myul = document.querySelector("ul")
+undefined
+myul.querySelector("li")
+<li>​…​</li>​
+const green = myul.querySelector("li")
+undefined
+green.style.backgroundColor="green"
+'green'
+green.style.padding="15px"
+'15px'
+green.innerText
+'one'
+green.innerText = "Five"
+'Five'
+
+
+document.querySelectorAll("h3")
+NodeList(32) [h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3, h3]
+const myH3 =document.querySelectorAll("h3")
+undefined
+myH3[0].innerText
+'Creation at Netscape'
+const myH2 =document.querySelectorAll(".mw-headline")
+undefined
+myH2[0].innerText
+'History'
+myH2
+NodeList(74) [span#History.mw-headline, span#Creation_at_Netscape.mw-headline, span#Adoption_by_Microsoft.mw-headline, span#The_rise_of_JScript.mw-headline, span#Growth_and_standardization.mw-headline, span#Reaching_maturity.mw-headline, span#Trademark.mw-headline, span#Website_client-side_usage.mw-headline, span#Examples_of_scripted_behavior.mw-headline, span#Web_libraries_and_frameworks.mw-headline, span#jQuery.mw-headline, span#React.mw-headline, span#Angular.mw-headline, span#Vanilla_JS.mw-headline, span#Other_usage.mw-headline, span#Execution_system.mw-headline, span#Just-in-time_compilation.mw-headline, span#JavaScript_engine.mw-headline, span#Run-time_environment.mw-headline, span#Examples.mw-headline, span#Node.js.mw-headline, span#Deno.mw-headline, span#Features.mw-headline, span#Imperative_and_structured.mw-headline, span#Weakly_typed.mw-headline, span#Dynamic.mw-headline, span#Typing.mw-headline, span#Run-time_evaluation.mw-headline, span#Object-orientation_(prototype-based).mw-headline, span#Prototypes.mw-headline, span#Functions_as_object_constructors.mw-headline, span#Functions_as_methods.mw-headline, span#Functional.mw-headline, span#Lexical_closure.mw-headline, span#Anonymous_function.mw-headline, span#Delegative.mw-headline, span#Functions_as_roles_(Traits_and_Mixins).mw-headline, span#Object_composition_and_inheritance.mw-headline, span#Miscellaneous.mw-headline, span#Zero-based_numbering.mw-headline, span#Variadic_functions.mw-headline, span#Array_and_object_literals.mw-headline, span#Regular_expressions.mw-headline, span#Promises_and_Async/await.mw-headline, span#Promises.mw-headline, span#Async/await.mw-headline, span#Vendor-specific_extensions.mw-headline, span#Syntax.mw-headline, span#Simple_examples.mw-headline, span#More_advanced_example.mw-headline, span#Security.mw-headline, span#Cross-site_vulnerabilities.mw-headline, span#Cross-site_scripting.mw-headline, span#Cross-site_request_forgery.mw-headline, span#Misplaced_trust_in_the_client.mw-headline, span#Misplaced_trust_in_developers.mw-headline, span#Browser_and_plugin_coding_errors.mw-headline, span#Sandbox_implementation_errors.mw-headline, span#Hardware_vulnerabilities.mw-headline, span#Development_tools.mw-headline, span#Static_program_analysis.mw-headline, span#ESLint.mw-headline, span#JSLint.mw-headline, span#Related_technologies.mw-headline, span#Java.mw-headline, span#JSON.mw-headline, span#TypeScript.mw-headline, span#WebAssembly.mw-headline, span#Transpilers.mw-headline, span#Ajax.mw-headline, span#References.mw-headline, span#Sources.mw-headline, span#Further_reading.mw-headline, span#External_links.mw-headline]
+myH2.forEach((h) => {
+    h.style.color = "red"
+})
+undefined
+myH2.forEach((h) => {
+    h.style.color = "red"
+})
+undefined
+myH2.forEach((h) => {
+    h.style.color = "red"
+    h.style.backgroundColor = "green"
+    h.style.padding = "15px"
+})
+ -->
