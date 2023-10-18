@@ -64,6 +64,7 @@ async function consumePromiseFive() {
     console.log(error);
   }
 }
+consumePromiseFive();
 
 async function getAllUsers() {
   try {
